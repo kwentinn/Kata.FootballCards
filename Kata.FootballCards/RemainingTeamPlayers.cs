@@ -13,11 +13,7 @@
 
 		internal void GiveCard(BookingInfo bookingInfo)
 		{
-			TeamBooking booking = this.Team.GiveCard(bookingInfo);
-			//if (booking.IsSentOff)
-			//{
-			//	NumberOfPlayers--;
-			//}
+			this.Team.GiveCard(bookingInfo);
 		}
 	}
 }

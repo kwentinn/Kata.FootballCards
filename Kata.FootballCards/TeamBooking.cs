@@ -13,34 +13,33 @@
 			PlayerNumber = playerNumber;
 		}
 
-		public TeamBooking GiveCard(CardType cardType)
+		public void GiveCard(CardType cardType)
 		{
 			if (cardType == CardType.Yellow)
 			{
-				return this.GiveYellow();
+				this.GiveYellow();
+				return;
 			}
 			if (cardType == CardType.Red)
 			{
-				return this.GiveRed();
+				this.GiveRed();
+				return;
 			}
-			return this;
 		}
 
-		private TeamBooking GiveYellow()
+		private void GiveYellow()
 		{
 			if (this.YellowCards < 2)
 			{
 				this.YellowCards++;
 			}
-			return this;
 		}
-		private TeamBooking GiveRed()
+		private void GiveRed()
 		{
 			if (this.RedCards < 1)
 			{
 				this.RedCards++;
 			}
-			return this;
 		}
 	}
 }

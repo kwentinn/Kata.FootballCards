@@ -15,12 +15,13 @@
 			{
 				this.playerBookings[i] = new TeamBooking(i + 1);
 			}
+
 			Name = name;
 		}
 
-		internal TeamBooking GiveCard(BookingInfo bookingInfo)
+		internal void GiveCard(BookingInfo bookingInfo)
 		{
-			return this.playerBookings[bookingInfo.PlayerNumber - 1].GiveCard(bookingInfo.CardType);
+			this.playerBookings[bookingInfo.PlayerNumber - 1].GiveCard(bookingInfo.CardType);
 		}
 	}
 }
