@@ -1,6 +1,6 @@
 ﻿namespace Kata.FootballCards
 {
-	public record RemainingTeamPlayers
+	public sealed record RemainingTeamPlayers
 	{
 		public Team Team { get; }
 		public int RemainingPlayers => Team.RemainingPlayers;

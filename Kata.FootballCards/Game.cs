@@ -1,6 +1,6 @@
 ﻿namespace Kata.FootballCards
 {
-	public class Game
+	public sealed class Game
 	{
 		public (int, int) GetRemainingPlayers(string[] cardsInfo)
 		{
@@ -16,7 +16,7 @@
 
 		private (int, int) GetRemainingPlayers(IEnumerable<BookingInfo> bookings)
 		{
-			MatchSheet matchSheet = new MatchSheet("A", "B");
+			MatchSheet matchSheet = new("A", "B");
 			foreach (BookingInfo bookingInfo in bookings)
 			{
 				matchSheet.GiveCard(bookingInfo);

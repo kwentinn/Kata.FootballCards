@@ -1,6 +1,6 @@
 ﻿namespace Kata.FootballCards
 {
-	public class MatchSheet
+	public sealed class MatchSheet
 	{
 		private readonly RemainingTeamPlayers remainingTeamPlayersHome;
 		private readonly RemainingTeamPlayers remainingTeamPlayersAway;

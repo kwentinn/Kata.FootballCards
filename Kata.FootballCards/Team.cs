@@ -2,26 +2,20 @@
 {
 	public class Team
 	{
-		private readonly TeamBooking[] playerBookings;
+		private readonly PlayerBookingsCollection playerBookingsColl;
 		public string Name { get; }
 
-		public int RemainingPlayers => playerBookings.Count(tb => !tb.IsSentOff);
+		public int RemainingPlayers => playerBookingsColl.RemainingPlayers;
 
 		public Team(string name)
 		{
-			this.playerBookings = new TeamBooking[11];
-
-			for (int i = 0; i < 11; i++)
-			{
-				this.playerBookings[i] = new TeamBooking(i + 1);
-			}
-
 			Name = name;
+			this.playerBookingsColl = new PlayerBookingsCollection();
 		}
 
 		internal void GiveCard(BookingInfo bookingInfo)
 		{
-			this.playerBookings[bookingInfo.PlayerNumber - 1].GiveCard(bookingInfo.CardType);
+			this.playerBookingsColl.Get(bookingInfo.PlayerNumber).GiveCard(bookingInfo.CardType);
 		}
 	}
 }

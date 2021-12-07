@@ -1,6 +1,6 @@
 ﻿namespace Kata.FootballCards
 {
-	public class BookingInfoBuilder
+	public static class BookingInfoBuilder
 	{
 		public static IEnumerable<BookingInfo> BuildBookings(string[] cardsInfo)
 		{
